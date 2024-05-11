@@ -1,19 +1,10 @@
-# Wigxel Official Vite Template
+## Tutorial Source code
+This source code demonstrates how to use React portals function creating and abstracting Tab functionality.
 
-### Use as template
-
-```bash
-npx giget@latest gh:wigxel/vite-template
-```
-
-### Tools
-
-- [Vite](https://https://vitejs.dev/) - Development Framework
-- [Biome](https://biomejs.dev) - Formatting, Linting and Code quality
-- [TanstackRouter](https://tanstack.com/router/latest) - Routing
-- [TanstackQuery](https://tanstack.com/query/latest) - Asynchronous state management
-- [Ofetch](https://unjs.io/ofetch) - Data fetching
-- [Zod](https://zod.dev) - Type safe and Data Validation
+## Videos
+Watch the video tutorials from Youtube
+- [Part 1](https://www.youtube.com/watch?v=gtlZXBIf9jU "Basic Tab Functionality")
+- Part 2 - WIP
 
 ## Available Scripts
 
@@ -47,11 +38,3 @@ Your app is ready to be deployed!
 ### Biomejs
 
 Install [extension](https://biomejs.dev/reference/vscode/#:~:text=You%20can%20install%20the%20code,biome%20%2C%20and%20hit%20enter) in VSCode.
-
-### Environment variables
-
-Create a `.env.local` file `.env.example` file and populate the variables.
-
-```bash
-cp .env.example .env.local
-```
