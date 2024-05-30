@@ -11,10 +11,16 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as DecoratorImport } from './routes/decorator'
 import { Route as DashboardImport } from './routes/dashboard'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const DecoratorRoute = DecoratorImport.update({
+  path: '/decorator',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const DashboardRoute = DashboardImport.update({
   path: '/dashboard',
@@ -38,9 +44,17 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardImport
       parentRoute: typeof rootRoute
     }
+    '/decorator': {
+      preLoaderRoute: typeof DecoratorImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexRoute, DashboardRoute])
+export const routeTree = rootRoute.addChildren([
+  IndexRoute,
+  DashboardRoute,
+  DecoratorRoute,
+])
